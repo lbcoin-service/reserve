@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/static/styles/styles.css" />
-
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.png') }}">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,9 @@
   <body>
     <header id="validHeader">
       <div class="row1">
-        <img src="/static/images/arrow-left.svg" alt="icon left" width="32" />
+        <a href="{{ url_for('register') }}">
+          <img src="/static/images/arrow-left.svg" alt="icon left" width="30" />
+        </a>
         <p>Achat Sécurisé</p>
       </div>
 
