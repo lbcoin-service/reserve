@@ -1024,6 +1024,10 @@ header#loginHeader a:first-child {
   }
 
 
+}
 
 
+
+#validationQuestBox {
+  margin-block: 10px 150px;
 }
