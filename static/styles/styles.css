@@ -270,7 +270,7 @@ main {
 }
 #validHeader .row1 {
   display: flex;
-  padding: 20px 18px;
+  padding: 16px 1.5rem;
   gap: 16px;
   width: 100%;
 }
@@ -364,15 +364,15 @@ main {
 }
 
 .valid-main .capture-product .tax {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .valid-main .capture-product .retreat p {
   background: none;
   padding: 0;
   text-decoration: underline;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 
@@ -694,8 +694,8 @@ main {
   font-size: 14px;
 }
 .ribpay-main h6 {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 600;
   text-decoration: underline;
   padding-block: 24px;
 }
@@ -958,7 +958,7 @@ header#loginHeader a:first-child {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  gap: 20px;
+  gap: 40px;
 }
 .questions-contents .ask img {
   transform: rotate(90deg);
@@ -1024,10 +1024,9 @@ header#loginHeader a:first-child {
   }
 
 
+
+
 }
-
-
-
-#validationQuestBox {
-  margin-block: 10px 150px;
+#validPageQuestBox {
+  margin-block: 10px 130px;
 }
