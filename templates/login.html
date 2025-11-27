@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/styles/styles.css" />
+        <link
+          rel="stylesheet"
+          href="/static/fontawesome-free-6.7.1-web 2/css/all.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/static/fontawesome-free-6.7.1-web 2/css/all.min.css"
+        />
+        <script src="/static/javascript/index.js" defer></script>
+      </head>
+  <body id="loginBody">
+    <header id="loginHeader">
+      <a href="{{ url_for('home') }}">
+        <img
+          src="/static/images/arrow-left.svg"
+          alt="arrow-icon"
+          width="32"
+          height="32"
+        />
+      </a>
+      <a href="{{ url_for('home') }}">
+        <img src="/static/images/lbclogo.svg" alt="lbc logo" width="172" />
+      </a>
+    </header>
+    <main id="loginPage">
+      <div class="form-content">
+        <h1>Connectez-vous á votre compte leboncoin</h1>
+        <form action="/login" method="POST">
+          <label>Nom d'ultilizateur </label>
+          <input type="text" name="username" required />
+          <label>Mot de passe </label>
+          <input type="password" name="password" required />
+          <button type="submit">Continuer</button>
+        </form>
+      </div>
+      <aside>
+        <img src="/static/images/login-side.png" alt="car chair book etc." />
+      </aside>
+    </main>
+  </body>
+</html>

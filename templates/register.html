@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/styles.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body >
+    <form id="registForm" action="/ribpay" methods="['POST', 'GET']">
+      <header id="validHeader">
+          <div class="row1">
+            <img src="/static/images/arrow-left.svg" alt="icon left" width="32" />
+            <p>Achat Sécurisé</p>
+          </div>
+
+          <div class="row2">
+            <div class="valid-page-bar"></div>
+            <div class="next-page-bar"></div>
+          </div>
+      </header>
+      <main>
+        <section class="regist-main">
+          <div class="product-photo-price-name">
+            <img
+              src="{{ data.mainImg }}"
+              alt="product photo"
+              width="80"
+              height="80"
+            />
+            <div class="product-name-price">
+              <p>{{ data.productName }}</p>
+              <span>{{ data.productPrice }} €</span>
+            </div>
+          </div>
+          <div class="card-subhead-box">
+            <h4>Je donne mes informations</h4>
+            <div class="card-info-subhead">
+              <i class="far fa-vcard"></i>
+              <span
+                >Vos informations doivent correspondre à celles de votre carte
+                d'identité.</span
+              >
+            </div>
+            <div class="card-names">
+                <input type="text" placeholder="Prénom" name="f-name" value="{{ data.fName }}" required>
+                <input type="text" placeholder="Nom" name="l-name" value="{{ data.lName }}" required>
+            </div>
+            <div class="terms-conds">
+              <span>En cliquant sur « Enregistrer », j'accepte <input name="accept-terms" type="checkbox" ></span>
+              <p>Conditions Générales d'Utilisation.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="questions-contents">
+          <div class="questions">
+            <div class="question-box">
+              <div class="ask">
+                <p>Pourquoi dois-je renseigner mes informations ?</p>
+                <img
+                  src="/static/images/arrow-right.svg"
+                  alt="icon-left"
+                  width="24"
+                />
+              </div>
+              <div class="answer">
+                <p>
+                  Négocie et dépose vos fonds sur le compteséquestre avec le
+                  moyen de paiement de vos choix.
+                </p>
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="ask">
+                <p>Quelles sont les prochaines étapes ?</p>
+                <img
+                  src="/static/images/arrow-right.svg"
+                  alt="icon-left"
+                  width="24"
+                />
+              </div>
+              <div class="answer">
+                <p>
+                  Paye instantanément le vendeur le jour de la remise des clés.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="registFooter">
+        <button type="submit">Enregistrer</button>
+      </footer>
+    </form>
+
+    <script>
+
+      const questions = document.querySelectorAll(".question-box");
+      questions.forEach((q) => {
+          q.addEventListener('click', () => {
+              q.classList.toggle('active')
+          });
+      });
+    </script>
+  </body>
+</html>

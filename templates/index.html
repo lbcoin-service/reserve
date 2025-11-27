@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/styles.css">
+</head>
+<body>
+<header id="indexHeader">
+    <div class="header-row1">
+        <a href="{{ url_for('login') }}" target="_blank"><img src="/static/images/arrow-left.svg" alt="icon" width="30"></a>
+        <span class="agent-initial">P</span>
+        <div class="agent-name-offline-time">
+            <p id="name">{{ data.agent }}</p>
+            <p id="time">Dernière activité il y a {{ data.lastSeen }}</p>
+        </div>
+        <div id="mobileMenu">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+        </div>
+    </div>
+    <div class="header-row2">
+        <img src="{{ data.mainImg }}" alt="car photo" id="carPhoto">
+        <div class="car-name-with-price">
+            <p id="carName">{{ data.productName }}</p>
+            <p id="carPrice">{{ data.productPrice }} €</p>
+        </div> 
+    </div>
+</header>
+<main id="indexMain">
+    <section id="indexPageSect">
+        <div class="message-box-content">
+            <div class="message-icon-box">
+                <div class="icon-box">
+                    <div class="icon-box-border">
+                        <i class="fa fa-shield"></i>
+                        <span class="euro-icon">€</span>
+                    </div>
+                </div>
+                <div class="message-box">
+                    <div class="message-text-box">
+                        <h2>Votre réservation a été accepté!</h2>
+                        <h4>Voici les prochaines étapes de votre achat:</h4>
+                        <ul>
+                            <li>- Je négocie et dépose mes fonds sur le compte séquestre avec le moyen de paiement de mon choix.</li>
+                            <li>- Je paye instantanément le vendeur le jour de la remise des clés.</li>
+                        </ul>
+                        <span class="message-box-smalltxt">Toute transaction par paiement sécurisé leboncoin est accessible uniquement depuis le bouton dans la messagerie, une fois la réservation acceptée. Il ne vous sera jamais envoyé par e-mail, SMS, image, capture d'écran, photographie ou lien.</span>
+                        <p><img src="/static/images/arrow-left-blue.svg" alt="icon" width="24">En savoir plus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="message-sent-time">
+                <p>16:45 - Message automatique</p>
+            </div>
+        </div>
+        <div class="message-box-content">
+            <div class="message-icon-box">
+                <div class="icon-box">
+                    <div class="icon-box-border">
+                        <i class="fa fa-shield"></i>
+                        <span class="euro-icon">€</span>
+                    </div>
+                </div>
+                <div class="message-box">
+                    <div class="message-text-box">
+                        <h2>Votre réservation a été accepté!</h2>
+                        <h4>Voici les prochaines étapes de votre achat:</h4>
+                        <ul>
+                            <li>- Je négocie et dépose mes fonds sur le compte séquestre avec le moyen de paiement de mon choix.</li>
+                            <li>- Je paye instantanément le vendeur le jour de la remise des clés.</li>
+                        </ul>
+                        <span class="message-box-smalltxt">Toute transaction par paiement sécurisé leboncoin est accessible uniquement depuis le bouton dans la messagerie, une fois la réservation acceptée. Il ne vous sera jamais envoyé par e-mail, SMS, image, capture d'écran, photographie ou lien.</span>
+                        <p><img src="/static/images/arrow-left-blue.svg" alt="icon" width="24">En savoir plus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="message-sent-time">
+                <p>{{ data.lastMsg }} - Message automatique</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="indexFooter">
+    <a href="{{ url_for('validation') }}">Déposer mes fonds</a>
+    <div class="write-msg-content">
+        <p>+</p>
+        <p class="write-placeholder">Écrire un message...</p>
+        <i class="fa fa-paper-plane"></i>
+    </div>
+</footer>
+<script src="/static/javascript/index.js"></script>
+</body>
+</html>

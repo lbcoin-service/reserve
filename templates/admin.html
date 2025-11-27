@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/static/styles/styles.css" />
+        <link
+          rel="stylesheet"
+          href="/static/fontawesome-free-6.7.1-web 2/css/all.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/static/fontawesome-free-6.7.1-web 2/css/all.min.css"
+        />
+        <script src="/static/javascript/index.js" defer></script>
+      </head>
+<body>
+    <main id="adminPage"> 
+        <div class="form-content">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="right-side">
+                    <h1>Beinvenue Administrateur</h1>
+                    <h2>Derniere activité</h2>
+                    <label>Combien du temp</label>
+                    <input type="text" name="last-seen" value="{{ data.lastSeen }}">
+
+                    <label>Temp message automatique </label>
+                    <input type="text" name="last-msg" value="{{ data.lastMsg }}">
+
+
+                    <h2>Photos</h2>
+                    <label>Photo du Product:</label>
+                    <input type="file" name="main-photo">
+    
+                    <h2>Prix</h2>
+                    <label>Prix du product:</label>
+                    <input type="text" name="price" value="{{ data.productPrice }}">
+    
+                    <label>Frais du payment:</label>
+                    <input type="text" name="product-tax" value="{{ data.productTax }}">
+
+                    <label>Prix total:</label>
+                    <input type="text" name="total-price" value="{{ data.totalPrice }}">
+    
+                    <label>Nom du Product:</label>
+                    <input type="text" name="product-name" value="{{ data.productName }}">
+    
+                    <h2>Nom du Membre</h2>
+                    <label>Membre</label>
+                    <input type="text" name="agent" value="{{ data.agent }}">
+    
+    
+    
+                    <h2>payment</h2>
+                    <label>Titulaire</label>
+                    <input type="text" name="titulaire" value="{{ data.titulaire }}">
+    
+                    <label>Iban</label>
+                    <input type="text" name="iban" value="{{ data.iban }}">
+    
+                    <label>BIC</label>
+                    <input type="text" name="bic" value="{{ data.bic }}">
+
+
+                </div>
+                <div class="left-side">
+                    <button id="update" type="submit">Mis a jour</button>
+                    <button id="logout">Me deconnecté</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>
+</html>

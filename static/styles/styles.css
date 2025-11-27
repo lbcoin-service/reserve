@@ -1,0 +1,1029 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#indexHeader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 999;
+}
+#indexHeader .header-row1 {
+  padding: 14px 30px 14px 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+#indexHeader .header-row1 .agent-initial {
+  font-size: 18px;
+  padding: 12px 14px;
+  border-radius: 50%;
+  line-height: 16px;
+  color: #fff;
+  background-color: #ec5a13;
+  height: max-content;
+  margin-left: 8px;
+}
+#indexHeader .header-row1 .agent-name-offline-time {
+  width: 100%;
+}
+#indexHeader #name {
+  font-size: 20px;
+  font-weight: 700;
+}
+#indexHeader #time {
+  font-size: 14px;
+  color: #0000004e;
+}
+#indexHeader #mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+}
+#indexHeader #mobileMenu i {
+  font-size: 6px;
+  color: #0000004e;
+}
+
+#indexHeader .header-row2 {
+  padding: 10px 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: first baseline;
+  gap: 10px;
+  box-shadow: 0 0.1px 2px rgba(0, 0, 0, 0.3);
+}
+#indexHeader .header-row2 img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+#indexHeader .header-row2 .car-name-with-price {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+#indexHeader #carName {
+  font-size: 20px;
+  line-height: 24px;
+  color: #010d1dd3;
+}
+
+#indexHeader #carPrice {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#indexMain {
+  padding-top: 150px;
+  padding-bottom: 180px;
+  padding-inline: 1.5rem;
+}
+#indexMain .message-box-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#indexMain .message-box-content .message-sent-time p {
+  color: #00000085;
+  font-size: 15px;
+}
+#indexMain .icon-box {
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+#indexMain .icon-box i {
+  color: #ec5a13;
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#indexMain .icon-box span {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#indexMain .icon-box-border {
+  border: 2px solid #ec5a13;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+}
+#indexMain .message-icon-box {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+#indexMain .message-box {
+  width: 100%;
+}
+#indexMain .message-text-box {
+  margin-top: 1.5rem;
+  padding: 16px;
+  border: 1px solid #0000004e;
+  border-radius: 16px 16px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#indexMain .message-text-box ul,
+#indexMain .message-text-box h4 {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #040827d3;
+}
+#indexMain .message-text-box ul,
+#indexMain .message-text-box span {
+  margin-top: 14px;
+}
+#indexMain .message-text-box h2 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #040827d3;
+}
+#indexMain .message-text-box span {
+  font-size: 14px;
+  color: #040827d3;
+}
+#indexMain .message-text-box p {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 1px;
+  color: #073066;
+  margin-top: 6px;
+}
+#indexMain .message-text-box p img {
+  transform: rotate(180deg);
+}
+#indexMain .message-sent-time p {
+  font-size: 16px;
+  width: 100%;
+  text-align: end;
+}
+
+#indexFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 14px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  box-shadow: 0 6px 10px #000;
+}
+#indexFooter a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ec5a13;
+  padding: 14px 44px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 16px;
+  width: max-content;
+}
+#indexFooter .write-msg-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+#indexFooter .write-msg-content p:first-child {
+  font-size: 28px;
+  font-weight: 200;
+  line-height: 28px;
+  padding: 10px 14px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 16px;
+  cursor: pointer;
+}
+#indexFooter .write-msg-content p.write-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  color: #0000004e;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 16px;
+  width: 100%;
+}
+#indexFooter .write-msg-content i {
+  font-size: 16px;
+  padding: 16px;
+  border: 1px solid #ec5a13;
+  border-radius: 16px;
+  color: #fff;
+  background-color: #ec5a13;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+main {
+  height: max-content;
+}
+
+/*--------=========================== VALID PAGE CSS ====================================-----------------*/
+#validHeader {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+#validHeader .row1 {
+  display: flex;
+  padding: 20px 18px;
+  gap: 16px;
+  width: 100%;
+}
+#validHeader .row1 p {
+  font-weight: 670;
+  font-size: 24px;
+  letter-spacing: 0.8px;
+}
+
+#validHeader .row2 {
+  width: 100%;
+  display: flex;
+  gap: 4px;
+}
+
+#validHeader .valid-page-bar {
+  width: 60%;
+  height: 6px;
+  background-color: #ec5a13;
+  border-radius: 16px;
+}
+#validHeader .next-page-bar {
+  width: 40%;
+  height: 6px;
+  background-color: #00000016;
+  border-radius: 16px;
+  border-right: 3px solid #ec5a13;
+}
+.valid-main {
+  width: 100%;
+  padding-top: 90px;
+  padding-inline: 18px;
+}
+.valid-main .product-photo-price-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 10px 30px;
+  border-bottom: 1px solid #0000004e;
+}
+.valid-main .product-photo-price-name img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+.valid-main .product-photo-price-name p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.valid-main .product-photo-price-name span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.valid-main .product-name-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.valid-main .capture-product {
+  padding-block: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.valid-main .capture-product .price,
+.valid-main .capture-product .tax,
+.valid-main .capture-product .retreat p {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 16px;
+  background-color: #b1bcda2b;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+.valid-main .capture-product h4 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+.valid-main .capture-product .note span {
+  color: #041b3a79;
+  font-size: 14px;
+}
+
+.valid-main .capture-product .tax {
+  color: brown;
+  background-color: rgba(255, 160, 122, 0.208);
+}
+
+.valid-main .capture-product .tax {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.valid-main .capture-product .retreat p {
+  background: none;
+  padding: 0;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+
+#validFooter {
+  width: 100%;
+  padding: 30px 16px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  display: flex;
+  gap: 14px;
+  flex-direction: column;
+}
+#validFooter .total {
+  display: flex;
+}
+#validFooter .total p {
+  font-size: 18px;
+  color: #1e0332dd;
+}
+#validFooter .total span {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e0332dd;
+  margin-left: 10px;
+}
+
+#validFooter a {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 50px;
+  text-align: center;
+  color: #1e0332dd;
+  text-decoration: none;
+  background: #ec5a13;
+  color: #fff;
+  border-radius: 16px;
+  width: 100%;
+}
+
+/*--------=========================== REGISTER PAGE CSS ====================================-----------------*/
+#registForm {
+  width: 100%;
+  overflow: hidden;
+}
+/*== HEADER INHERITED ==*/
+#registForm #registHeader {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.regist-main {
+  padding-top: 90px;
+  padding-inline: 18px;
+}
+
+.regist-main .product-photo-price-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 10px 30px;
+  border-bottom: 1px solid #0000004e;
+}
+
+.regist-main .product-photo-price-name img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+.regist-main .product-photo-price-name p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.regist-main .product-photo-price-name span {
+  font-size: 16px;
+  font-weight: 700;
+}
+.regist-main .product-name-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.regist-main .card-subhead-box {
+  padding-block: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.regist-main .card-subhead-box h4 {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.regist-main .card-info-subhead {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+  padding: 20px 16px;
+  background-color: #b1bcda2b;
+  color: #0000009c;
+  border-radius: 16px;
+  font-size: 14px;
+  gap: 10px;
+}
+.regist-main .card-info-subhead i {
+  font-size: 14px;
+}
+.regist-main .card-names {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+.regist-main .card-names input {
+  width: 100%;
+  font-size: 18px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 1px solid #00000072;
+}
+.regist-main .card-names input::placeholder {
+  color: #00000072;
+}
+.regist-main .terms-conds span {
+  background: none;
+  padding: 0;
+  color: #0000009c;
+  font-size: 14px;
+}
+
+.regist-main .terms-conds p {
+  background: none;
+  padding: 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000b1;
+  text-decoration: underline;
+}
+#registFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 16px;
+  background-color: #fff;
+}
+#registFooter button {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  background: #ec5a13;
+  color: #fff;
+  border-radius: 16px;
+  width: 100%;
+  border: none;
+}
+
+/*-------------==================RIB-PAY PAGE CSS ====================----------------------------*/
+/*--Header inherited*/
+
+.ribpay-main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-inline: 16px;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+.ribpay-main h2 {
+  margin-top: 18px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.ribpay-main h3 {
+  margin-top: 18px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.ribpay-main .ribpage-list {
+  padding-top: 10px;
+  padding-left: 14px;
+}
+.ribpay-main .ribpage-list ul {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-top: 8px;
+  list-style: none;
+}
+.ribpay-main .ribpage-list ul li {
+  position: relative;
+  border-left: 1px solid #0000007b;
+  padding-left: 28px;
+  padding-bottom: 34px;
+}
+.ribpay-main .ribpage-list ul li:last-child {
+  border-left: none;
+}
+.ribpay-main .ribpage-list ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+  height: 28px;
+  width: 28px;
+  border: 4px solid #fff;
+  background-color: rgb(222, 245, 221);
+  border-radius: 50%;
+  box-shadow: 0 0 3px #00000011;
+}
+.ribpay-main .ribpage-list ul li span.rib-list-no {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-50%);
+  font-size: 16px;
+  line-height: 38px;
+  font-weight: 600;
+}
+.ribpage-list ul li p {
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.ribpay-main .ribpage-list ul li span {
+  color: #061d35d5;
+  font-size: 16px;
+}
+.ribpay-main .ribpage-list ul li span h5 {
+  color: #000;
+  font-size: 14px;
+}
+
+.ribpay-main .rib-account-content {
+  padding: 18px;
+  margin-top: 8px;
+  border: 1px solid #0000007b;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ribpay-main .rib-account-content h4 {
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 16px;
+  justify-content: space-between;
+  border-bottom: 1px solid #0000007b;
+}
+.ribpay-main .rib-account-content h4 i {
+  font-size: 1rem;
+  padding-right: 4px;
+}
+.ribpay-main .rib-account-content button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 50px;
+  border: none;
+  border-radius: 16px;
+  background-color: #e5e4edae;
+}
+.ribpay-main .rib-account-content button i {
+  margin-right: 12px;
+}
+.ribpay-main .rib-account-content .copy-text {
+  display: none;
+}
+.ribpay-main .ribpage-list .product-price {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background-color: rgb(241, 232, 229);
+}
+.ribpay-main .ribpage-list .product-price h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(90, 26, 1);
+}
+.ribpay-main .note {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  padding: 18px;
+  background-color: #e5e4ed7b;
+  border-radius: 16px;
+}
+
+.ribpay-main .note p {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.ribpay-main .note p span {
+  font-weight: 400;
+  font-size: 14px;
+}
+.ribpay-main h6 {
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: underline;
+  padding-block: 24px;
+}
+
+#paidNoteCon {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: none;
+}
+#paidNoteCon .paid-box {
+  width: 600px;
+  padding: 24px;
+  border-radius: 18px;
+  margin: auto;
+  background-color: #fff;
+  height: max-content;
+  color: #011b28de;
+  position: relative;
+}
+#paidNoteCon .paid-box i {
+  font-size: 24px;
+  cursor: pointer;
+}
+#paidNoteCon .paid-box img {
+  width: 65%;
+  max-width: 80%;
+  margin-inline: auto;
+}
+#paidNoteCon .paid-box h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0 0;
+}
+#paidNoteCon .paid-box ul {
+  max-height: 200px;
+  list-style-type: none;
+  font-size: 18px;
+  padding: 0 20px 20px;
+  overflow-x: auto;
+  margin-block: 30px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+}
+#paidNoteCon .paid-box ul li {
+  margin-top: 16px;
+  padding-left: 20px;
+  border-left: 1px solid #efefef;
+  position: relative;
+}
+#paidNoteCon .paid-box button {
+  cursor: pointer;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 16px;
+  width: calc(100% - 50px);
+  border: none;
+  color: #fff;
+  padding: 12px 0;
+  background: rgb(255, 110, 20);
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#paidNoteCon .paid-box ul li::before {
+  content: " ";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #efefef;
+  left: 0;
+  top: 0;
+  border: 3px solid #fff;
+  transform: translateX(-50%);
+}
+
+#paidNoteCon.show-feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+/*---------------================= LOGIN PAGE =================------------------*/
+#loginBody {
+  width: 100%;
+  height: calc(100vh - 60px);
+}
+header#loginHeader {
+  padding: 40px;
+  position: relative;
+  min-height: 60px;
+  box-shadow: 0 1px 3px 0 #6c819d61;
+}
+header#loginHeader a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+header#loginHeader a:first-child {
+  left: 40px;
+}
+#loginPage {
+  display: flex;
+  height: 100%;
+  padding-top: 0;
+}
+#loginPage .form-content {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 400px;
+}
+#loginPage .form-content form {
+  display: flex;
+  flex-direction: column;
+}
+#loginPage .form-content h1 {
+  font-size: 24px;
+  line-height: 32px;
+}
+#loginPage .form-content form label {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+#loginPage .form-content form input {
+  padding-inline: 16px;
+  height: 44px;
+  border-radius: 16px;
+  color: #152233;
+  border: 0.5px solid #152233;
+  margin-bottom: 24px;
+}
+#loginPage .form-content form button {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ec5a13;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 100%;
+  height: 44px;
+  border: none;
+}
+#loginPage aside {
+  width: 50%;
+  padding-left: 16px;
+}
+#loginPage aside img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+/*-------------========== ADMIN PAGE CSS ========-----------*/
+#adminPage {
+  width: 100%;
+}
+#adminPage  form {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #00000016;
+}
+#adminPage  form .right-side {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+#adminPage  form .right-side h1{
+  margin-top: 4rem;
+}#adminPage  form .right-side h2{
+  margin-top: 4rem;
+}
+
+#adminPage  form .right-side label{
+  margin-top: 10px;
+}
+
+#adminPage  form .right-side input{
+  width: max-content;
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+
+}
+
+#adminPage  form .left-side {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 35%;
+  height: 100vh;
+  padding: 20px;
+  background-color: #00000072;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border: 10px solid #000;
+}
+
+#adminPage  form .left-side button{
+  font-size: 1.2rem;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 14px;
+  background-color: green;
+  color: #fff;
+}
+
+#adminPage  form .left-side button:last-child{
+  background-color: red;
+}
+
+
+
+
+
+
+
+/*-----------======== PAGES QUESTION SECTION CSS ====================--------------------*/
+
+.answer {
+  display: none;
+}
+.question-box.active .answer {
+  display: block;
+}
+
+.questions-contents {
+  margin-block: 10px 90px;
+  width: 100%;
+  background-color: #0323840b;
+  padding-bottom: 24px;
+
+}
+.questions-contents .ask {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 20px;
+}
+.questions-contents .ask img {
+  transform: rotate(90deg);
+}
+.questions-contents p {
+  padding-block: 24px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.question-box .answer p {
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid #0000004e;
+}
+.question-box {
+  padding-inline: 16px;
+}
+.question-box:last-child {
+  border-top: 1px solid #00000024;
+}
+
+
+
+
+
+
+
+
+
+/*--------=======  MOBILE RESPONSIVENESS =======---------*/
+@media screen and (max-width: 600px) {
+  #paidNoteCon .paid-box {
+    width: 100%;
+    padding: 24px;
+    background-color: #fff;
+    height: 100%;
+    border-radius: 0;
+    color: #011b28de;
+  }
+
+  #paidNoteCon .paid-box img {
+    margin: 30px auto 0;
+    width: 300px;
+  }
+  #paidNoteCon .paid-box ul {
+    max-height: max-content;
+    list-style-type: none;
+    padding: 0 20px 20px;
+    overflow-x: auto;
+  }
+
+
+  #loginBody {
+    height: 100vh;
+    overflow: hidden;
+  }
+  #loginPage aside {
+    display: none;
+  }
+  #loginPage {
+    padding-inline: 18px;
+  }
+
+
+
+
+}

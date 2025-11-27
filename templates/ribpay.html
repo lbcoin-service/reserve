@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles/styles.css" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='javascript/index.js')}}"></script>
+  </head>
+  <body>
+    <header id="validHeader">
+      <div class="row1">
+        <img src="/static/images/arrow-left.svg" alt="icon left" width="32" />
+        <p>Achat Sécurisé</p>
+      </div>
+
+      <div class="row2">
+        <div class="valid-page-bar"></div>
+        <div class="next-page-bar"></div>
+      </div>
+    </header>
+    <main>
+      <section class="ribpay-main">
+        <img src="/static/images/rib-pay.avif" alt="avatar" width="300" />
+        <h2>Déposez vos fonds sur votre compte séquestre leboncoin</h2>
+        <h3>Comment procéder ?</h3>
+        <div class="ribpage-list">
+          <ul>
+            <li>
+              <span class="rib-list-no">1</span>
+              <p>Je me connecté à mon compte bancaire</p>
+            </li>
+            <li>
+              <span class="rib-list-no">2</span>
+              <p>J'ajoute le RIB leboncoin à mes bénéficiaires :</p>
+              <div class="rib-account-content">
+                <h4>
+                  <i class="fa fa-lock"></i> RIB Compte séquestre leboncoin
+                </h4>
+                <span
+                  >Titulaire <br />
+                  <h5>LEBONCOIN</h5></span
+                >
+                <span
+                  >IBAN <br />
+                  <h5>FR76 2193 3000 0131 8944 8644 105</h5></span
+                >
+                <span
+                  >BIC <br />
+                  <h5>MPAYFRP1XXX</h5></span
+                >
+
+                <div class="copy-text" id="copyText">
+                  Titulaire: {{ data.titulaire }} IBAN: {{ data.iban }} BIC: {{
+                  data.bic }}
+                </div>
+                <button onclick="copyFormatText()"><i class="far fa-copy"></i>Copier IBAN</button>
+              </div>
+            </li>
+            <li>
+              <span class="rib-list-no">3</span>
+              <p>
+                J'effectue le virement correspondant à la somme négociée en
+                amont ou le prix de base :
+              </p>
+              <div class="product-price">
+                <h5>Prix du véhicule</h5>
+                <h5>{{ data.totalPrice }} €</h5>
+              </div>
+            </li>
+            <li>
+              <span class="rib-list-no">4</span>
+              <p>Je suis notifié(e) lorsque mes fonds sont bien arrivés</p>
+            </li>
+          </ul>
+        </div>
+        <div class="note">
+          <i class="far fa-lightbulb"></i>
+          <p>
+            Votre virement prendra jusqu'à 4 jours ouvrés <br />
+            <span>
+              Votre banque peut prendre jusqu'à 48h pour valider votre
+              bénéficiaire. Plus sous 2 jours ouvrés vous recevrez vos fonds sur
+              votre compte leboncoin et nous vous en tiendrons imformé.
+            </span>
+          </p>
+        </div>
+        <h6>je ne souhaite plus acheter ce vehicle</h6>
+      </section>
+      <section class="questions-contents">
+        <div class="questions">
+          <div class="question-box">
+            <div class="ask">
+              <p>Comment de temps prendre le virement ?</p>
+              <img
+                src="/static/images/arrow-right.svg"
+                alt="icon-left"
+                width="24"
+              />
+            </div>
+            <div class="answer">
+              <p>
+                Négocie et dépose vos fonds sur le compteséquestre avec le moyen
+                de paiement de vos choix.
+              </p>
+            </div>
+          </div>
+          <div class="question-box">
+            <div class="ask">
+              <p>Comment payer le vendeur ensuite ?</p>
+              <img
+                src="/static/images/arrow-right.svg"
+                alt="icon-left"
+                width="24"
+              />
+            </div>
+            <div class="answer">
+              <p>
+                Paye instantanément le vendeur le jour de la remise des clés.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--------============-----  POPUP BOX  --===============------------>
+      <div id="paidNoteCon" class="">
+        <div class="paid-box">
+          <i id="iUnderstoodClose" class="fa fa-times"></i><br />
+          <img src="/static/images/rib-pay.avif" alt="man avatar" />
+          <h3>
+            Bravo! <br />
+            Voici les prochaines étapes
+          </h3>
+          <ul>
+            <li>
+              Vous recevrez une notification quand votre virement sera arrivé
+              sur le compte leboncoin.
+            </li>
+            <li>
+              Alors vous pourrez organiser un rendez-vous avec le vendeur pour
+              procéder au paiement et à la remise des clés. A ce stade, il sera
+              toujours possible de négocier le prix ou d'annuler la transaction.
+            </li>
+          </ul>
+          <button id="iUnderstoodBtn">J'ai compri !</button>
+        </div>
+      </div>
+    </main>
+
+    <footer id="registFooter">
+      <button type="submit" id="iPaidBtn">J'ai fait mon virement</button>
+    </footer>
+
+    <script>
+        const iPaidBtn = document.getElementById("iPaidBtn");
+        const paidNoteCon = document.getElementById("paidNoteCon");
+        const iUnderstoodBtn = document.getElementById("iUnderstoodBtn")
+        const iUnderstoodClose = document.getElementById("iUnderstoodClose")
+
+        iPaidBtn.addEventListener("click", () => {
+            paidNoteCon.classList.add("show-feedback");
+        });
+        iUnderstoodBtn.addEventListener("click", () => {
+            paidNoteCon.classList.remove("show-feedback")
+        });
+        iUnderstoodClose.addEventListener("click", () => {
+            paidNoteCon.classList.remove("show-feedback")
+        })
+        
+        const questions = document.querySelectorAll(".question-box");
+        questions.forEach((q) => {
+            q.addEventListener('click', () => {
+                q.classList.toggle('active')
+            });
+        });
+    </script>
+  </body>
+</html>
